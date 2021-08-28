@@ -1,10 +1,22 @@
 #!/bin/bash -x 
 
-flip=$(($((RANDOM%10))%2))
+read -p "Enter the number of flip:" n
+headsCount=0
+tailsCount=0
+count=0
 
-if [ $flip -eq 1 ]
-then
-	echo "Heads"
-else
-	echo "Tails"
-fi
+for (( i=1; i<=n; i++ ))
+	do
+	flip=$(($((RANDOM%10))%2))
+ 	if [ $flip -eq 1 ]
+	then
+		echo "Heads"
+		headsCount=$(($headsCount+1))
+	else
+		echo "Tails"
+		tailsCount=$(($tailsCount+1))
+		count=$(($count+1))
+	fi
+done
+echo "Heads=$headsCount"
+echo "Tails=$tailsCount"
