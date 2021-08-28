@@ -1,3 +1,2 @@
 # CoinsimulatorUC
 
-Flip coin simulation
